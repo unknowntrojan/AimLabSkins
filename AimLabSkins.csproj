@@ -1,0 +1,662 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="ACTk.Examples.Genuine.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ACTk.Examples.Genuine.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ACTk.Examples.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ACTk.Examples.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ACTk.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ACTk.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Analytics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Avro.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Avro.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.BugReporting">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.BugReporting.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Build">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Build.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Common">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Content.GraphQL">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Content.GraphQL.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Content.ScreenTransitions">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Content.ScreenTransitions.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Contentful.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Contentful.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Database">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Debugging">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Debugging.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Debugging.Utilities">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Debugging.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Experiments">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Experiments.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.GraphQL">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.GraphQL.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.GraphQL.Tests">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.GraphQL.Tests.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Localization">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Login">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Login.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.MainMenu.Bindings">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.MainMenu.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.MainMenu.Data">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.MainMenu.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.MainMenu.Utilities">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.MainMenu.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Models">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Models.Utilities">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Models.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Optimizely">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Optimizely.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Plugins">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.ROG">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.ROG.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Settings">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.Tools">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="AimLab.UI.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AimLab.UI.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AmplifyShaderEditor.Samples.BuiltIn">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AmplifyShaderEditor.Samples.BuiltIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AssetRipper.VersionUtilities">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\AssetRipper.VersionUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="AsyncAwaitUtil">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\AsyncAwaitUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Avro">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Avro.dll</HintPath>
+    </Reference>
+    <Reference Include="Backtrace.Unity">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Backtrace.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="BakeryRuntimeAssembly">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\BakeryRuntimeAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\BepInEx.Preloader.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.Common">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\BepInEx.Unity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\BepInEx.Unity.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="Bitsplash.DataVisualizer.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Bitsplash.DataVisualizer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ChartAndGraph">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ChartAndGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ColorPicker">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="constants">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\constants.dll</HintPath>
+    </Reference>
+    <Reference Include="Contentful">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Contentful.dll</HintPath>
+    </Reference>
+    <Reference Include="Cpp2IL.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Cpp2IL.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CreatorStudio.Events">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CreatorStudio.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="CsWorkshop">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CsWorkshop.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Bots">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Bots.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Forms">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_FpsGame">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_FpsGame.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_GameEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_GameEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_LevelEditor">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_LevelEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Models">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Models.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Player">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Player.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Security">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Security.dll</HintPath>
+    </Reference>
+    <Reference Include="CS_Utilities">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\CS_Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="dataAcademyModel">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\dataAcademyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="dataServicesCulture">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\dataServicesCulture.dll</HintPath>
+    </Reference>
+    <Reference Include="DentedPixel.LeanTween">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\DentedPixel.LeanTween.dll</HintPath>
+    </Reference>
+    <Reference Include="discord.rpc.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\discord.rpc.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\DOTweenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="EasySave3">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\EasySave3.dll</HintPath>
+    </Reference>
+    <Reference Include="EnhancedScroller">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\EnhancedScroller.dll</HintPath>
+    </Reference>
+    <Reference Include="GameTools">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\GameTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Gee.External.Capstone">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Gee.External.Capstone.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphAndChartUnityPlugin">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\GraphAndChartUnityPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Il2CppInterop.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Generator">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Il2CppInterop.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.HarmonySupport">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Il2CppInterop.HarmonySupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMicrosoft.CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppMicrosoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.CodeDom">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Drawing">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Net.Http">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Windows.Forms">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Il2CppSystem.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="IndexRange">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\IndexRange.dll</HintPath>
+    </Reference>
+    <Reference Include="JWT">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="Klutch">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Klutch.dll</HintPath>
+    </Reference>
+    <Reference Include="LapinerTools">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LapinerTools.dll</HintPath>
+    </Reference>
+    <Reference Include="LapinerTools.Steam.Shared">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LapinerTools.Steam.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="LapinerTools.Workshop.Data">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LapinerTools.Workshop.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LapinerTools.Workshop.UI">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LapinerTools.Workshop.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="LastAbyss.SimpleGraphQL.Plugins">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LastAbyss.SimpleGraphQL.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="LastAbyss.SimpleGraphQL.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LastAbyss.SimpleGraphQL.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="LeTai.TranslucentImage">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LeTai.TranslucentImage.dll</HintPath>
+    </Reference>
+    <Reference Include="LeTai.TrueShadow">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LeTai.TrueShadow.dll</HintPath>
+    </Reference>
+    <Reference Include="LeTai.TrueShadow.Demo">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LeTai.TrueShadow.Demo.dll</HintPath>
+    </Reference>
+    <Reference Include="LibCpp2IL">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\LibCpp2IL.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadingScreenPro">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\LoadingScreenPro.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageHub">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\MessageHub.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MurmurHash">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\MurmurHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="OSA">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\OSA.dll</HintPath>
+    </Reference>
+    <Reference Include="P2T">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\P2T.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.ClipperLib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Pathfinding.ClipperLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Poly2Tri">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform_Models">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Platform_Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform_Steam">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Platform_Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayFab">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\PlayFab.dll</HintPath>
+    </Reference>
+    <Reference Include="PoolingAssembly">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\PoolingAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="ProgressBarPro">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ProgressBarPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Segment.Analytics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Segment.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="SemanticVersioning">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\SemanticVersioning.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleFileBrowser.Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\SimpleFileBrowser.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleSQL_Runtime">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\SimpleSQL_Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SonicBloom.Koreo">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\SonicBloom.Koreo.dll</HintPath>
+    </Reference>
+    <Reference Include="SSM">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\SSM.dll</HintPath>
+    </Reference>
+    <Reference Include="taskModels">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\taskModels.dll</HintPath>
+    </Reference>
+    <Reference Include="ToucanSystems.SmartChart">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\ToucanSystems.SmartChart.dll</HintPath>
+    </Reference>
+    <Reference Include="UFPSGameProfile">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\UFPSGameProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.003">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\interop\Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\unity-libs\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="WasmDisassembler">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Aim Lab\BepInEx\core\WasmDisassembler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
