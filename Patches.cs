@@ -1,32 +1,82 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using HarmonyLib;
-using AimLab;
-using AimLabUtilities;
-using System.Reflection;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using HarmonyLib;
+using AimLab.Utility;
+using AimLabUtilities;
+using AimLab.Models.Economy;
 
-namespace AimLabSkins
+namespace AimLabUnlocker
 {
-    public static class Patches
+    [HarmonyPatch(typeof(IdentityService), "IsUserSubscribed")]
+    internal static class SubPatch
     {
-        [HarmonyPatch]
-        internal static class SkinPatch
+        static bool Prefix(ref bool __result)
         {
-            static IEnumerable<MethodBase> TargetMethods()
-            {
-                return AccessTools.GetTypesFromAssembly(Assembly.Load(Assembly.GetAssembly(typeof(Main)).GetReferencedAssemblies().Where(asm => asm.Name.Contains("Assembly-CSharp")).First()))
-                    .Where(type => type.Name.Contains("CosmeticSettingsUtility"))
-                    .SelectMany(type => type.GetMethods())
-                    .Where(meth => meth.ReturnType == typeof(SkinOwnedResult)).Select(x => { Main.LogXD.LogMessage("Patching skin ownership check from " + x.Name);  return x;  }).Cast<MethodBase>();
-            }
+            __result = true;
+            return false;
+        }
+    }
 
-            public static bool Prefix(ref SkinOwnedResult __result)
-            {
-                __result = SkinOwnedResult.Owned;
-                return false;
-            }
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "HasSkin")]
+    internal static class HSPatch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "IsOwnedItem", new Type[] {typeof(string)})]
+    internal static class IOI0Patch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "IsOwnedItem", new Type[] { typeof(CatalogItem), typeof(bool) })]
+    internal static class IOI1Patch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "IsOwnedSkin")]
+    internal static class IOSPatch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "OwnsArmSkin")]
+    internal static class OASPatch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(CosmeticSettingsUtility), "OwnsWeaponSkin")]
+    internal static class OWSPatch
+    {
+        static bool Prefix(ref SkinOwnedResult __result)
+        {
+            __result = SkinOwnedResult.Owned;
+            return false;
         }
     }
 }
